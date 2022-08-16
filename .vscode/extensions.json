@@ -3,7 +3,7 @@
     "Vue.volar",
     "antfu.iconify",
     "dbaeumer.vscode-eslint",
-    "voorjaar.windicss-intellisense",
+    "antfu.unocss",
     "csstools.postcss"
   ]
 }

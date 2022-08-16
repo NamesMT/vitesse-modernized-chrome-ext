@@ -4,9 +4,8 @@ import Vue from '@vitejs/plugin-vue'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
-import WindiCSS from 'vite-plugin-windicss'
+import Unocss from 'unocss/vite'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import windiConfig from './windi.config'
 
 const port = parseInt(process.env.PORT || '') || 3309
 const r = (...args: string[]) => resolve(__dirname, ...args)
@@ -54,10 +53,9 @@ export default defineConfig(({ command }) => {
 
       Icons(),
 
-      // https://github.com/antfu/vite-plugin-windicss
-      WindiCSS({
-        config: windiConfig,
-      }),
+      // https://github.com/antfu/unocss
+      // see unocss.config.ts for config
+      Unocss(),
 
       // https://github.com/intlify/vite-plugin-vue-i18n
       VueI18n({
